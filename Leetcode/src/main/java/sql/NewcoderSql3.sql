@@ -1,0 +1,12 @@
+
+/*
+ * 查找当前薪水详情以及部门编号
+ */
+
+
+select s.*,d.dept_no
+from salaries as s
+inner join dept_manager as d
+on s.emp_no = d.emp_no
+where s.to_date = '9999-01-01'
+and d.to_date = '9999-01-01';
