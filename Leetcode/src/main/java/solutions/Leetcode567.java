@@ -14,14 +14,14 @@ public class Leetcode567 {
 
         Map<Character, Integer> need = new HashMap<>();
         Map<Character, Integer> window = new HashMap<>();
-        int left =0, right = 0;
+        int left = 0, right = 0;
         int valid = 0;
-        for(char c : s1.toCharArray())
-            need.put(c, need.getOrDefault(c, 0)+1);
+        for (char c : s1.toCharArray())
+            need.put(c, need.getOrDefault(c, 0) + 1);
         while (right < s2.length()) {
             char c = s2.charAt(right);
             right++;
-            if (need.containsKey(c)){
+            if (need.containsKey(c)) {
                 window.put(c, window.getOrDefault(c, 0) + 1);
                 if (window.get(c).equals(need.get(c)))
                     valid++;
