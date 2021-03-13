@@ -23,7 +23,7 @@ public class Leetcode234 {
         return res;
     }
 
-    public static class ListNode {
+    private static class ListNode {
         int val;
         ListNode next;
 
